@@ -37,7 +37,6 @@ end
 
 
 def update
-   
    if @article.update(white_list)
 flash[:notice] ="Article was updated succesfully" 
 redirect_to @article 
@@ -48,7 +47,6 @@ end
 
 
 def destroy
- 
   @article.destroy
   redirect_to articles_path
 end
@@ -60,7 +58,7 @@ def set_article
 end
 
 def white_list
-    params.require(:article).permit(:title,:description)
+    params.require(:article).permit(:title,:description,category_ids: [])
 end
 
 def require_same_user
