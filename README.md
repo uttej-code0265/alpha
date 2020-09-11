@@ -15,3 +15,5 @@ Extra Gems Used :-
 
 Styling Used :- BootStrap 4
 
+* Authentication system includes sessions controller and require student email and password for login the password entered by the student matches with the hashed version of original password and if it matches we can start session with this student 
+
